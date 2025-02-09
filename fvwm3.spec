@@ -12,14 +12,7 @@ Group:          Graphical desktop/Other
 
 URL:            https://www.fvwm.org/
 Source0:        https://github.com/fvwmorg/fvwm3/releases/%{version}/%{srcname}-%{version}.tar.gz
-
-#block-logo
-Source1:        fvwm3.png
-# to get an icon on the xterm button
-Source6:        fvwm3_terminal.png
 Source9:        fvwm3.desktop
-
-
 
 BuildRequires:  flex
 BuildRequires:  sharutils
@@ -122,7 +115,7 @@ autoreconf -fi
 
 install -D -m644 %{SOURCE1} %{buildroot}%{_iconsdir}/fvwm3.png
 
-install -D -m644 %{SOURCE6} %{buildroot}%{_iconsdir}/fvwm3_terminal.png
+#install -D -m644 %{SOURCE6} %{buildroot}%{_iconsdir}/fvwm3_terminal.png
 
 install -D -m644 %{SOURCE9} %{buildroot}%{_datadir}/xsessions/fvwm3.desktop
 
