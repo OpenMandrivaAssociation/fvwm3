@@ -12,6 +12,7 @@ Group:          Graphical desktop/Other
 
 URL:            https://www.fvwm.org/
 Source0:        https://github.com/fvwmorg/fvwm3/releases/%{version}/%{srcname}-%{version}.tar.gz
+Source1:        fvwm3.png
 Source9:        fvwm3.desktop
 
 BuildRequires:  flex
@@ -40,7 +41,7 @@ BuildRequires:  pkgconfig(imlib2)
 BuildRequires:  pkgconfig(librsvg-2.0)
 BuildRequires:  pkgconfig(xtrans)
 BuildRequires:  readline-devel
-BuildRequires:  ruby-asciidoctor
+BuildRequires:  asciidoctor
 
 #BuildRequires:  pkgconfig(tinfo)
 #BuildRequires:  libstroke-devel
