@@ -61,7 +61,8 @@ Requires:       xwd
 Requires:       imagemagick
 Recommends:       feh
 # for mimeinfo
-Requires:       perl-File-MimeInfo
+# broken, so no
+#Requires:       perl-File-MimeInfo
 # for compositing (enhancement only)
 Recommends:       xcompmgr
 Recommends:       transset-df
