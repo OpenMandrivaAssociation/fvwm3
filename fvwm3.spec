@@ -20,7 +20,7 @@ BuildRequires:  sharutils
 BuildRequires:  xsltproc
 #BuildRequires:  golang
 BuildRequires:  pkgconfig(pkg-config)
-BuildRequires:  pkgconfig(libbson-1.0)
+#BuildRequires:  pkgconfig(libbson-1.0)
 BuildRequires:  pkgconfig(libevent)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xrandr)
