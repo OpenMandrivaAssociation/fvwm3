@@ -59,13 +59,13 @@ Requires:       xterm
 # for iconification and wallpaper
 Requires:       xwd
 Requires:       imagemagick
-Requires:       feh
+Recommends:       feh
 # for mimeinfo
 Requires:       perl-File-MimeInfo
 # for compositing (enhancement only)
 Recommends:       xcompmgr
 Recommends:       transset-df
-Requires:       rxvt-unicode
+Recommends:       rxvt-unicode
 Recommends:     terminology
 
 Conflicts:        fvwm2
