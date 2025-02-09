@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Fvwm3
+Comment=The F Virtual Window Manager
+Icon=/usr/share/icons/fvwm3.png
+TryExec=/usr/bin/fvwm3
+Exec=/usr/bin/fvwm3
