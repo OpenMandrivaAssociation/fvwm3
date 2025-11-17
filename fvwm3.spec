@@ -112,7 +112,7 @@ Conflicts:      fvwm2-doc
         -Dpng=enabled \
         -Dlibsvg-cairo=enabled \
         -Dfreetype=enabled \
-        -Dbidi-enabled
+        -Dbidi=enabled
         -Dgolang=disabled \
         -Dmandoc=true \
         --sysconfdir=%{fvwmconfdir}
