@@ -4,7 +4,7 @@
 %define         docname        %{name}-doc
 
 Name:           fvwm3
-Version:        1.1.2
+Version:        1.1.4
 Release:        1
 Summary:        FVWM version 3, the successor to fvwm2 
 License:        GPLv2+
