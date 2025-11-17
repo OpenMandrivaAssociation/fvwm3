@@ -15,6 +15,7 @@ Source0:        https://github.com/fvwmorg/fvwm3/releases/%{version}/%{srcname}-
 Source1:        fvwm3.png
 Source9:        fvwm3.desktop
 
+BuildRequires:  meson
 BuildRequires:  flex
 BuildRequires:  sharutils
 BuildRequires:  xsltproc
@@ -96,24 +97,33 @@ Conflicts:      fvwm2-doc
 
 
 %prep
-%setup -q -n %{srcname}-%{version}
-%autopatch -p1
-autoreconf -fi
+%autosetup -n %{srcname}-%{version} -p1
 
 
 %build
-%configure \
-    --enable-mandoc \
-    --sysconfdir=%{fvwmconfdir} \
-    --with-imagepath=%{_datadir}/icons \
-    --disable-golang
+%meson \
+        -Dxpm=enabled \
+        -Dxrender=enabled \
+        -Dxfixes=enabled \
+        -Dxcursor=enabled \
+        -Dsvg=enabled \
+        -Dsm=enabled \
+        -Dreadline=enabled \
+        -Dpng=enabled \
+        -Dlibsvg-cairo=enabled \
+        -Dfreetype=enabled \
+        -Dbidi-enabled
+        -Dgolang=disabled \
+        -Dmandoc=true \
+        --sysconfdir=%{fvwmconfdir}
 
-%make_build LOCALEDIR=%{_datadir}/locale localedir=%{_datadir}/locale
+%meson_build
 
 
 
 %install
-%{make_install} LOCALEDIR=%{_datadir}/locale localedir=%{_datadir}/locale
+#{make_install} LOCALEDIR=%{_datadir}/locale localedir=%{_datadir}/locale
+%meson_install
 
 install -D -m644 %{SOURCE1} %{buildroot}%{_iconsdir}/fvwm3.png
 
