@@ -116,10 +116,7 @@ Conflicts:      fvwm2-doc
         -Dgolang=disabled \
         -Dmandoc=true \
         --sysconfdir=%{fvwmconfdir}
-
 %meson_build
-
-
 
 %install
 #{make_install} LOCALEDIR=%{_datadir}/locale localedir=%{_datadir}/locale
