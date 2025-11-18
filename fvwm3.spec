@@ -100,7 +100,6 @@ Conflicts:      fvwm2-doc
 %autosetup -n %{srcname}-%{version} -p1
 
 
-%build
 %meson \
         -Dxpm=enabled \
         -Dxrender=enabled \
@@ -116,6 +115,7 @@ Conflicts:      fvwm2-doc
         -Dgolang=disabled \
         -Dmandoc=true \
         --sysconfdir=%{fvwmconfdir}
+%build        
 %meson_build
 
 %install
